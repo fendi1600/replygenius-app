@@ -1,0 +1,196 @@
+{
+  "common": {
+    "loading": "Memuatkan…",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "done": "Selesai",
+    "back": "Kembali",
+    "next": "Seterusnya",
+    "skip": "Langkau",
+    "yes": "Ya",
+    "no": "Tidak",
+    "ok": "OK",
+    "error": "Ralat berlaku. Sila cuba lagi.",
+    "view_all": "Lihat Semua",
+    "customize": "Sesuaikan",
+    "send": "Hantar",
+    "edit": "Edit",
+    "delete": "Padam",
+    "search": "Cari",
+    "filter": "Tapis",
+    "mark_all_read": "Tandakan semua sebagai dibaca"
+  },
+
+  "splash": {
+    "tagline": "AI Peti Masuk Sosial oleh MintG"
+  },
+
+  "auth": {
+    "welcome_back": "Selamat kembali 👋",
+    "sign_in_subtitle": "Log masuk untuk urus peti masuk sosial anda",
+    "email": "E-mel",
+    "email_placeholder": "anda@contoh.com",
+    "password": "Kata Laluan",
+    "forgot_password": "Lupa kata laluan?",
+    "sign_in": "Log Masuk",
+    "signing_in": "Sedang log masuk…",
+    "or_continue": "atau teruskan dengan",
+    "no_account": "Tiada akaun?",
+    "sign_up_free": "Daftar Percuma",
+    "sign_up": "Buat Akaun",
+    "sign_up_subtitle": "Mulakan percubaan percuma 14 hari",
+    "full_name": "Nama Penuh",
+    "name_placeholder": "Nama anda",
+    "confirm_password": "Sahkan Kata Laluan",
+    "already_have_account": "Sudah ada akaun?",
+    "sign_in_link": "Log Masuk",
+    "google": "Google",
+    "facebook": "Facebook",
+    "terms": "Dengan mendaftar, anda bersetuju dengan Terma & Dasar Privasi kami",
+    "sign_out": "Log Keluar",
+    "sign_out_confirm": "Adakah anda pasti mahu log keluar?"
+  },
+
+  "home": {
+    "greeting_morning": "Selamat pagi, {{name}}! 👋",
+    "greeting_afternoon": "Selamat tengah hari, {{name}}! 👋",
+    "greeting_evening": "Selamat petang, {{name}}! 👋",
+    "subtitle": "Jom cipta balasan terbaik hari ini.",
+    "today_overview": "Ringkasan Hari Ini",
+    "view_analytics": "Lihat Analitik",
+    "total_replies": "Jumlah Balasan",
+    "ai_success": "Kadar Kejayaan AI",
+    "leads": "Petunjuk",
+    "complaints": "Aduan",
+    "spam_blocked": "Spam Disekat",
+    "quick_actions": "Tindakan Pantas",
+    "ai_reply_generator": "Penjana\nBalasan AI",
+    "message_enhancer": "Penaik Taraf\nMesej",
+    "context_analyzer": "Penganalisis\nKonteks",
+    "templates": "Templat",
+    "recent_conversations": "Perbualan Terkini"
+  },
+
+  "inbox": {
+    "title": "Peti Masuk",
+    "search_placeholder": "Cari nama atau mesej…",
+    "all_messages": "Semua Mesej",
+    "post_comments": "Komen Posting",
+    "direct_messages": "Mesej Terus",
+    "all": "Semua",
+    "pending": "Menunggu",
+    "replied": "Dibalas",
+    "approved": "Diluluskan",
+    "spam": "Spam",
+    "escalated": "Dipertingkat",
+    "empty": "Semua selesai! 🎉",
+    "empty_subtitle": "Tiada mesej yang sepadan dengan penapis.",
+    "private_conversation": "Perbualan peribadi",
+    "dm_badge": "DM",
+    "mark_spam": "Tandakan sebagai spam",
+    "escalate": "Pertingkatkan",
+    "approve": "Luluskan"
+  },
+
+  "reply": {
+    "title": "Balas Komen",
+    "ai_suggestions": "Cadangan AI",
+    "choose_suggestion": "Pilih atau edit cadangan",
+    "edit_before_send": "Edit Sebelum Hantar",
+    "replying_as": "Membalas sebagai {{handle}}",
+    "approve_send": "Luluskan & Hantar",
+    "sending": "Menghantar…",
+    "sent_title": "Balasan Dihantar!",
+    "sent_subtitle": "Balasan anda telah disiarkan.",
+    "tone_friendly": "Mesra",
+    "tone_professional": "Profesional",
+    "tone_sales": "Jualan"
+  },
+
+  "analytics": {
+    "title": "Analitik",
+    "overview": "Gambaran Keseluruhan",
+    "total_comments": "Jumlah Komen",
+    "replied": "Dibalas",
+    "leads_detected": "Petunjuk Dikesan",
+    "complaints": "Aduan",
+    "reply_rate": "Kadar Balasan",
+    "avg_response": "Purata Masa Tindak Balas",
+    "platform_breakdown": "Pecahan Platform",
+    "vs_last_week": "vs minggu lalu",
+    "this_week": "Minggu Ini"
+  },
+
+  "templates": {
+    "title": "Templat",
+    "search_placeholder": "Cari templat…",
+    "all": "Semua",
+    "use": "Guna",
+    "categories": {
+      "general": "Umum",
+      "sales": "Jualan",
+      "delivery": "Penghantaran",
+      "support": "Sokongan"
+    }
+  },
+
+  "notifications": {
+    "title": "Notifikasi",
+    "today": "Hari Ini",
+    "yesterday": "Semalam",
+    "this_week": "Minggu Ini",
+    "empty": "Tiada notifikasi lagi"
+  },
+
+  "accounts": {
+    "title": "Akaun",
+    "connected": "Disambungkan",
+    "limited": "API Terhad",
+    "disconnected": "Tidak Disambung",
+    "connect": "Sambung",
+    "disconnect": "Putuskan",
+    "comments_today": "{{count}} komen hari ini",
+    "connected_accounts": "Akaun Disambungkan",
+    "your_plan": "Anda menggunakan Pelan {{plan}}",
+    "accounts_connected": "{{current}} / {{max}} akaun disambungkan",
+    "upgrade_to": "Naik taraf ke {{plan}}",
+    "current_plan": "Pelan Semasa",
+    "upgrade_now": "Naik Taraf Sekarang",
+    "upgrade_plan": "Naik Taraf Pelan",
+    "monthly": "Bulanan",
+    "yearly": "Tahunan (Jimat 20%)",
+    "secure_payment": "🔒 Pembayaran selamat · Batal bila-bila masa"
+  },
+
+  "settings": {
+    "title": "Tetapan",
+    "profile": "Maklumat Profil",
+    "notifications": "Keutamaan Notifikasi",
+    "business_hours": "Waktu Perniagaan",
+    "auto_reply": "Tetapan Balas Auto",
+    "ai_tone": "Nada AI",
+    "language": "Bahasa",
+    "privacy": "Data & Privasi",
+    "help": "Pusat Bantuan",
+    "support": "Hubungi Sokongan",
+    "version": "Versi {{version}}",
+    "section_settings": "TETAPAN",
+    "section_support": "SOKONGAN"
+  },
+
+  "rules": {
+    "title": "Peraturan AI",
+    "subtitle": "Tetapkan peraturan untuk AI membalas secara automatik.",
+    "auto_reply_rules": "Peraturan Balas Auto",
+    "smart_detection": "Pengesanan Pintar",
+    "phase2_title": "💡 Fasa 2: Balas Auto Penuh",
+    "phase2_body": "Peraturan balas auto memerlukan kelulusan manusia dalam Fasa 1. Buka kunci pada pelan Perniagaan & Agensi."
+  },
+
+  "plans": {
+    "free":       { "name": "Percuma",    "price": "RM0",   "desc": "Cuba ReplyGenius" },
+    "creator":    { "name": "Pencipta",   "price": "RM49",  "desc": "Sesuai untuk pencipta konten" },
+    "business":   { "name": "Perniagaan", "price": "RM99",  "desc": "Untuk perniagaan yang berkembang" },
+    "agency":     { "name": "Agensi",     "price": "RM249", "desc": "Urus pelbagai jenama" }
+  }
+}

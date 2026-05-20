@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "ReplyGenius",
+    "slug": "replygenius",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "replygenius",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6C3AE8"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "my.mintg.replygenius",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Used to upload profile photos",
+        "NSPhotoLibraryUsageDescription": "Used to upload profile photos"
+      }
+    },
+    "android": {
+      "package": "my.mintg.replygenius",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6C3AE8"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      "expo-localization",
+      "expo-splash-screen"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}

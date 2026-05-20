@@ -1,0 +1,196 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "cancel": "Cancel",
+    "save": "Save",
+    "done": "Done",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "error": "Something went wrong. Please try again.",
+    "view_all": "View All",
+    "customize": "Customize",
+    "send": "Send",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "mark_all_read": "Mark all as read"
+  },
+
+  "splash": {
+    "tagline": "AI Social Inbox by MintG"
+  },
+
+  "auth": {
+    "welcome_back": "Welcome back 👋",
+    "sign_in_subtitle": "Sign in to manage your social inbox",
+    "email": "Email",
+    "email_placeholder": "you@example.com",
+    "password": "Password",
+    "forgot_password": "Forgot password?",
+    "sign_in": "Sign In",
+    "signing_in": "Signing in…",
+    "or_continue": "or continue with",
+    "no_account": "Don't have an account?",
+    "sign_up_free": "Sign Up Free",
+    "sign_up": "Create Account",
+    "sign_up_subtitle": "Start your 14-day free trial",
+    "full_name": "Full Name",
+    "name_placeholder": "Your name",
+    "confirm_password": "Confirm Password",
+    "already_have_account": "Already have an account?",
+    "sign_in_link": "Sign In",
+    "google": "Google",
+    "facebook": "Facebook",
+    "terms": "By signing up you agree to our Terms & Privacy Policy",
+    "sign_out": "Sign Out",
+    "sign_out_confirm": "Are you sure you want to sign out?"
+  },
+
+  "home": {
+    "greeting_morning": "Good morning, {{name}}! 👋",
+    "greeting_afternoon": "Good afternoon, {{name}}! 👋",
+    "greeting_evening": "Good evening, {{name}}! 👋",
+    "subtitle": "Let's create great replies today.",
+    "today_overview": "Today Overview",
+    "view_analytics": "View Analytics",
+    "total_replies": "Total Replies",
+    "ai_success": "AI Success Rate",
+    "leads": "Leads",
+    "complaints": "Complaints",
+    "spam_blocked": "Spam Blocked",
+    "quick_actions": "Quick Actions",
+    "ai_reply_generator": "AI Reply\nGenerator",
+    "message_enhancer": "Message\nEnhancer",
+    "context_analyzer": "Context\nAnalyzer",
+    "templates": "Templates",
+    "recent_conversations": "Recent Conversations"
+  },
+
+  "inbox": {
+    "title": "Inbox",
+    "search_placeholder": "Search by name or message…",
+    "all_messages": "All Messages",
+    "post_comments": "Post Comments",
+    "direct_messages": "Direct Messages",
+    "all": "All",
+    "pending": "Pending",
+    "replied": "Replied",
+    "approved": "Approved",
+    "spam": "Spam",
+    "escalated": "Escalated",
+    "empty": "All caught up! 🎉",
+    "empty_subtitle": "No messages match your filters.",
+    "private_conversation": "Private conversation",
+    "dm_badge": "DM",
+    "mark_spam": "Mark as spam",
+    "escalate": "Escalate",
+    "approve": "Approve"
+  },
+
+  "reply": {
+    "title": "Reply to Comment",
+    "ai_suggestions": "AI Suggestions",
+    "choose_suggestion": "Choose or edit a suggestion",
+    "edit_before_send": "Edit Before Sending",
+    "replying_as": "Replying as {{handle}}",
+    "approve_send": "Approve & Send",
+    "sending": "Sending…",
+    "sent_title": "Reply Sent!",
+    "sent_subtitle": "Your reply has been posted.",
+    "tone_friendly": "Friendly",
+    "tone_professional": "Professional",
+    "tone_sales": "Sales"
+  },
+
+  "analytics": {
+    "title": "Analytics",
+    "overview": "Overview",
+    "total_comments": "Total Comments",
+    "replied": "Replied",
+    "leads_detected": "Leads Detected",
+    "complaints": "Complaints",
+    "reply_rate": "Reply Rate",
+    "avg_response": "Avg Response Time",
+    "platform_breakdown": "Platform Breakdown",
+    "vs_last_week": "vs last week",
+    "this_week": "This Week"
+  },
+
+  "templates": {
+    "title": "Templates",
+    "search_placeholder": "Search templates…",
+    "all": "All",
+    "use": "Use",
+    "categories": {
+      "general": "General",
+      "sales": "Sales",
+      "delivery": "Delivery",
+      "support": "Support"
+    }
+  },
+
+  "notifications": {
+    "title": "Notifications",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "this_week": "This Week",
+    "empty": "No notifications yet"
+  },
+
+  "accounts": {
+    "title": "Accounts",
+    "connected": "Connected",
+    "limited": "Limited API",
+    "disconnected": "Disconnected",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "comments_today": "{{count}} comments today",
+    "connected_accounts": "Connected Accounts",
+    "your_plan": "You're on {{plan}} Plan",
+    "accounts_connected": "{{current}} / {{max}} accounts connected",
+    "upgrade_to": "Upgrade to {{plan}}",
+    "current_plan": "Current Plan",
+    "upgrade_now": "Upgrade Now",
+    "upgrade_plan": "Upgrade Plan",
+    "monthly": "Monthly",
+    "yearly": "Yearly (Save 20%)",
+    "secure_payment": "🔒 Secure payment · Cancel anytime"
+  },
+
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile Information",
+    "notifications": "Notification Preferences",
+    "business_hours": "Business Hours",
+    "auto_reply": "Auto Reply Settings",
+    "ai_tone": "AI Tone",
+    "language": "Language",
+    "privacy": "Data & Privacy",
+    "help": "Help Center",
+    "support": "Contact Support",
+    "version": "Version {{version}}",
+    "section_settings": "SETTINGS",
+    "section_support": "SUPPORT"
+  },
+
+  "rules": {
+    "title": "AI Rules",
+    "subtitle": "Set rules for AI to reply automatically.",
+    "auto_reply_rules": "Auto Reply Rules",
+    "smart_detection": "Smart Detection",
+    "phase2_title": "💡 Phase 2: Full Auto-Reply",
+    "phase2_body": "Auto-reply rules require human approval in Phase 1. Unlock on Business & Agency plans."
+  },
+
+  "plans": {
+    "free":       { "name": "Free",       "price": "RM0",   "desc": "Try ReplyGenius" },
+    "creator":    { "name": "Creator",    "price": "RM49",  "desc": "Perfect for content creators" },
+    "business":   { "name": "Business",   "price": "RM99",  "desc": "For growing businesses" },
+    "agency":     { "name": "Agency",     "price": "RM249", "desc": "Manage multiple brands" }
+  }
+}

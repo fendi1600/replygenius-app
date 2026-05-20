@@ -1,0 +1,8 @@
+﻿node_modules/
+.expo/
+dist/
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
