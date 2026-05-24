@@ -5,7 +5,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTranslation } from 'react-i18next'
 import { T, SHADOW, RADIUS } from '../../constants/theme'
-import { Toggle } from '../../components/ui/Toggle'
+import Toggle from '../../components/ui/Toggle'
 import { mockAutoRules } from '../../data/mock'
 import type { AutoRule } from '../../types'
 

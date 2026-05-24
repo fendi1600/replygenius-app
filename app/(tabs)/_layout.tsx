@@ -94,6 +94,11 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      {/* Hidden screens — accessible via router.push but not shown in tab bar */}
+      <Tabs.Screen name="notifications" options={{ href: null }} />
+      <Tabs.Screen name="settings"      options={{ href: null }} />
+      <Tabs.Screen name="rules"         options={{ href: null }} />
     </Tabs>
   )
 }

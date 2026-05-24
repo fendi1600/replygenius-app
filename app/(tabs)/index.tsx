@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
+  SafeAreaView,
 } from 'react-native'
 import { useRouter } from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -71,8 +72,43 @@ export default function HomeScreen() {
 
   const recentComments = useMemo(() => comments.slice(0, 4), [comments])
 
+  const pendingCount = useInboxStore(s => s.getPendingCount())
+
   return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      {/* Top bar */}
+      <View style={styles.topBar}>
+        <TouchableOpacity onPress={() => router.push('/(tabs)/settings')} style={styles.topBtn}>
+          <Feather name="menu" size={22} color={T.text} />
+        </TouchableOpacity>
+        {/* Logo wordmark */}
+        <View style={styles.logoRow}>
+          <LinearGradient colors={[T.primary, T.primaryDk]} style={styles.logoIcon}>
+            <Text style={styles.logoEmoji}>⚡</Text>
+          </LinearGradient>
+          <Text style={styles.logoText}>
+            <Text style={{ color: T.text }}>Reply</Text>
+            <Text style={{ color: T.primary }}>Genius</Text>
+          </Text>
+        </View>
+        <View style={styles.topRight}>
+          {/* Bell */}
+          <TouchableOpacity onPress={() => router.push('/(tabs)/notifications')} style={styles.topBtn}>
+            <Feather name="bell" size={22} color={T.text} />
+            {pendingCount > 0 && (
+              <View style={styles.bellBadge}>
+                <Text style={styles.bellBadgeText}>{pendingCount > 9 ? '9+' : pendingCount}</Text>
+              </View>
+            )}
+          </TouchableOpacity>
+          {/* Pro pill */}
+          <View style={styles.proPill}>
+            <Text style={styles.proText}>👑 Pro</Text>
+          </View>
+        </View>
+      </View>
+
       {/* Greeting */}
       <View style={styles.greeting}>
         <Text style={styles.greetTitle}>{getGreeting()}, {firstName} 👋</Text>
@@ -214,17 +250,29 @@ export default function HomeScreen() {
         </View>
       </View>
     </ScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
+  container:   { flex: 1, backgroundColor: '#FFFFFF' },
+
+  // Top bar
+  topBar:      { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 18, paddingTop: 12, paddingBottom: 8 },
+  topBtn:      { padding: 6, position: 'relative' },
+  logoRow:     { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  logoIcon:    { width: 36, height: 36, borderRadius: 10, alignItems: 'center', justifyContent: 'center' },
+  logoEmoji:   { fontSize: 18 },
+  logoText:    { fontSize: 20, fontWeight: '800' },
+  topRight:    { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  bellBadge:   { position: 'absolute', top: 2, right: 2, width: 17, height: 17, borderRadius: 9, backgroundColor: T.red, borderWidth: 2, borderColor: '#fff', alignItems: 'center', justifyContent: 'center' },
+  bellBadgeText: { fontSize: 8, color: '#fff', fontWeight: '800' },
+  proPill:     { backgroundColor: '#FFFBEB', borderWidth: 1.5, borderColor: '#FDE68A', borderRadius: 20, paddingHorizontal: 10, paddingVertical: 5 },
+  proText:     { fontSize: 12, fontWeight: '800', color: '#92400E' },
+
   greeting: {
     paddingHorizontal: 20,
-    paddingTop: 56,
+    paddingTop: 8,
     paddingBottom: 20,
   },
   greetTitle: {
