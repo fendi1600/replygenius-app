@@ -4,9 +4,14 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "start:lan": "expo start --lan",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "setup": "powershell -ExecutionPolicy Bypass -File scripts/setup.ps1",
+    "watch-env": "powershell -ExecutionPolicy Bypass -File scripts/watch-env.ps1",
+    "typecheck": "tsc --noEmit",
+    "test:api": "ts-node scripts/test-api.ts"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
