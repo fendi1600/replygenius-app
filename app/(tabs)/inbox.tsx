@@ -9,7 +9,7 @@ import {
   SafeAreaView,
 } from 'react-native'
 import { useRouter } from 'expo-router'
-import { Feather } from '@expo/vector-icons'
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import { useTranslation } from 'react-i18next'
 import { T, SHADOW, RADIUS } from '../../constants/theme'
 import { useInboxStore } from '../../stores/useInboxStore'
@@ -43,12 +43,21 @@ const SOURCE_LABELS: { key: SourceFilter; label: string }[] = [
   { key: 'dm',      label: 'Direct Messages' },
 ]
 
-const PLATFORM_LABELS: { key: PlatformFilter; label: string }[] = [
-  { key: 'all',       label: 'All' },
-  { key: 'facebook',  label: 'FB'  },
-  { key: 'instagram', label: 'IG'  },
-  { key: 'youtube',   label: 'YT'  },
-  { key: 'tiktok',    label: 'TT'  },
+type PlatformLogoConfig = {
+  key: PlatformFilter
+  label: string
+  icon?: keyof typeof MaterialCommunityIcons.glyphMap
+  color: string
+  bg: string
+  activeBg: string
+}
+
+const PLATFORM_LOGOS: PlatformLogoConfig[] = [
+  { key: 'all',       label: 'All',  color: T.muted,    bg: T.bg,       activeBg: T.primaryLt },
+  { key: 'facebook',  label: 'FB',   icon: 'facebook',  color: '#1877F2', bg: '#EBF3FF', activeBg: '#1877F2' },
+  { key: 'instagram', label: 'IG',   icon: 'instagram', color: '#E1306C', bg: '#FDE8F0', activeBg: '#E1306C' },
+  { key: 'youtube',   label: 'YT',   icon: 'youtube',   color: '#FF0000', bg: '#FEE2E2', activeBg: '#FF0000' },
+  { key: 'tiktok',    label: 'TT',   icon: 'music-note',        color: '#010101', bg: '#F3F4F6', activeBg: '#010101' },
 ]
 
 const STATUS_LABELS: { key: StatusFilter; label: string }[] = [
@@ -76,6 +85,47 @@ function FilterPill({
       style={[styles.pill, active && styles.pillActive]}
     >
       <Text style={[styles.pillText, active && styles.pillTextActive]}>{label}</Text>
+    </TouchableOpacity>
+  )
+}
+
+function PlatformLogoPill({
+  config,
+  active,
+  onPress,
+}: {
+  config: PlatformLogoConfig
+  active: boolean
+  onPress: () => void
+}) {
+  if (!config.icon) {
+    // "All" pill — text only
+    return (
+      <TouchableOpacity
+        onPress={onPress}
+        activeOpacity={0.75}
+        style={[styles.pill, active && styles.pillActive]}
+      >
+        <Text style={[styles.pillText, active && styles.pillTextActive]}>All</Text>
+      </TouchableOpacity>
+    )
+  }
+
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      activeOpacity={0.8}
+      style={[
+        styles.logoPill,
+        { backgroundColor: active ? config.activeBg : config.bg },
+        active && styles.logoPillActive,
+      ]}
+    >
+      <MaterialCommunityIcons
+        name={config.icon}
+        size={20}
+        color={active ? '#fff' : config.color}
+      />
     </TouchableOpacity>
   )
 }
@@ -223,19 +273,19 @@ export default function InboxScreen() {
           ))}
         </ScrollView>
 
-        {/* Platform pills */}
+        {/* Platform pills — logo icons */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.filterRow}
           style={styles.filterScroll}
         >
-          {PLATFORM_LABELS.map(({ key, label }) => (
-            <FilterPill
-              key={key}
-              label={label}
-              active={platformFilter === key}
-              onPress={() => setPlatformFilter(key)}
+          {PLATFORM_LOGOS.map((cfg) => (
+            <PlatformLogoPill
+              key={cfg.key}
+              config={cfg}
+              active={platformFilter === cfg.key}
+              onPress={() => setPlatformFilter(cfg.key)}
             />
           ))}
         </ScrollView>
@@ -345,6 +395,19 @@ const styles = StyleSheet.create({
   },
   pillTextActive: {
     color: T.primary,
+  },
+  logoPill: {
+    width: 40,
+    height: 40,
+    borderRadius: RADIUS.full,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1.5,
+    borderColor: 'transparent',
+  },
+  logoPillActive: {
+    borderColor: 'transparent',
+    ...SHADOW.sm,
   },
   listContent: {
     padding: 16,
