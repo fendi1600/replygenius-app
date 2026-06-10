@@ -9,7 +9,9 @@ import {
   SafeAreaView,
 } from 'react-native'
 import { useRouter } from 'expo-router'
-import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons'
+import { SocialLogo } from '../../components/ui/SocialLogos'
+import type { SocialPlatform } from '../../components/ui/SocialLogos'
 import { useTranslation } from 'react-i18next'
 import { T, SHADOW, RADIUS } from '../../constants/theme'
 import { useInboxStore } from '../../stores/useInboxStore'
@@ -45,19 +47,15 @@ const SOURCE_LABELS: { key: SourceFilter; label: string }[] = [
 
 type PlatformLogoConfig = {
   key: PlatformFilter
-  label: string
-  icon?: keyof typeof MaterialCommunityIcons.glyphMap
-  color: string
-  bg: string
-  activeBg: string
+  social?: SocialPlatform
 }
 
 const PLATFORM_LOGOS: PlatformLogoConfig[] = [
-  { key: 'all',       label: 'All',  color: T.muted,    bg: T.bg,       activeBg: T.primaryLt },
-  { key: 'facebook',  label: 'FB',   icon: 'facebook',  color: '#1877F2', bg: '#EBF3FF', activeBg: '#1877F2' },
-  { key: 'instagram', label: 'IG',   icon: 'instagram', color: '#E1306C', bg: '#FDE8F0', activeBg: '#E1306C' },
-  { key: 'youtube',   label: 'YT',   icon: 'youtube',   color: '#FF0000', bg: '#FEE2E2', activeBg: '#FF0000' },
-  { key: 'tiktok',    label: 'TT',   icon: 'music-note',        color: '#010101', bg: '#F3F4F6', activeBg: '#010101' },
+  { key: 'all'       },
+  { key: 'facebook',  social: 'facebook'  },
+  { key: 'instagram', social: 'instagram' },
+  { key: 'youtube',   social: 'youtube'   },
+  { key: 'tiktok',    social: 'tiktok'    },
 ]
 
 const STATUS_LABELS: { key: StatusFilter; label: string }[] = [
@@ -98,8 +96,7 @@ function PlatformLogoPill({
   active: boolean
   onPress: () => void
 }) {
-  if (!config.icon) {
-    // "All" pill — text only
+  if (!config.social) {
     return (
       <TouchableOpacity
         onPress={onPress}
@@ -115,17 +112,9 @@ function PlatformLogoPill({
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={0.8}
-      style={[
-        styles.logoPill,
-        { backgroundColor: active ? config.activeBg : config.bg },
-        active && styles.logoPillActive,
-      ]}
+      style={[styles.logoPill, active && styles.logoPillActive]}
     >
-      <MaterialCommunityIcons
-        name={config.icon}
-        size={20}
-        color={active ? '#fff' : config.color}
-      />
+      <SocialLogo platform={config.social} size={36} mono={active} />
     </TouchableOpacity>
   )
 }
@@ -399,14 +388,13 @@ const styles = StyleSheet.create({
   logoPill: {
     width: 40,
     height: 40,
-    borderRadius: RADIUS.full,
+    borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1.5,
-    borderColor: 'transparent',
+    opacity: 0.45,
   },
   logoPillActive: {
-    borderColor: 'transparent',
+    opacity: 1,
     ...SHADOW.sm,
   },
   listContent: {
